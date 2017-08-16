@@ -9,7 +9,7 @@ repository: Kieranties/Kieranties.github.io
 show_downloads: false
 markdown: kramdown
 paginate: 5
-permalink: /:categories/:year/:month/:day/:title
+permalink: /:year/:month/:day/:title
 
 plugins:
   - jekyll-feed
