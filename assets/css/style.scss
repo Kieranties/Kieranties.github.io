@@ -1,0 +1,10 @@
+---
+---
+
+// customise sas variables : https://github.com/pages-themes/cayman/blob/master/_sass/variables.scss
+
+
+@import "{{ site.theme }}";
+
+// custom css goes here
+.project-name > a { color: white;}

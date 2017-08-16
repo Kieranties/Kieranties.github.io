@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
+  <body>
+    {% include pageheader.html %}
+
+    <section class="main-content">
+      {% include posttitle.html %}
+
+      {{ content }}
+
+      <p class="meta">
+          {% if page.tags %}
+          <span>Tags: </span>
+            {% for tag in page.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          {% endif %}
+      </p>
+
+      {% include pagefooter.html %}
+    </section>
+
+    {% include analytics.html %}
+  </body>
+</html>
