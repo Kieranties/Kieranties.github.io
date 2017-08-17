@@ -19,3 +19,7 @@ plugins:
   - jekyll-avatar
   - jemoji
   - jekyll-mentions
+
+exclude:
+  - CNAME
+  - *.sh
