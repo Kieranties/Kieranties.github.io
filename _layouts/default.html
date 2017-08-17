@@ -7,15 +7,22 @@
     <section class="main-content">
       {% include posttitle.html %}
 
-      {{ content }}
-
+      <div class="content">
+        {{ content }}
+      </div>
       <p class="meta">
-          {% if page.tags %}
-          <span>Tags: </span>
-            {% for tag in page.tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          {% endif %}
+        {% if page.tags %}
+          <div class="meta">
+            <div class="tags">
+              {% for tag in page.tags %}
+                <span class="tag">
+                    <i class="material-icons">local_offer</i>
+                    {{ tag }}
+                </span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
       </p>
 
       {% include pagefooter.html %}
