@@ -24,7 +24,7 @@ description: Musings, thoughts, ramblings, code.
 twitter_username: Kieranties
 github_username:  Kieranties
 lang: en-GB
-theme: jekyll-theme-hydejack
+# theme: jekyll-theme-hydejack
 repository: Kieranties/Kieranties.github.io
 show_downloads: false
 markdown: kramdown
