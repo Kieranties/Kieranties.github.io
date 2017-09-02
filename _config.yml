@@ -1,3 +1,23 @@
+url: http://blog.kieranties.com
+baseurl: ''
+image: /hydejack/assets/img/nap.jpg
+color: '#A85641'
+
+author:
+  name: Kieranties
+  email: Kieran@Kieranties.com
+
+disqus_shortname: kierantiescodes
+google_analytics: ''
+
+collections:
+  featured_categories:
+    permalink:       /category/:name/
+    output:          true
+  featured_tags:
+    permalink:       /tag/:name/
+    output:          true
+
 title: Kieranties Codes
 email: Kieran@Kieranties.com
 description: Musings, thoughts, ramblings, code.
