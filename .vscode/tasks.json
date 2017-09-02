@@ -6,17 +6,26 @@
         {
             "taskName": "Install",
             "type": "shell",
-            "command": "gem install jekyll bundler"
+            "command": "gem install jekyll bundler",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }
         },
         {
             "taskName": "Update",
             "type": "shell",
-            "command": "bundle install"
+            "command": "bundle install",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }
         },
         {
             "taskName": "Serve",
             "type": "shell",
             "command": "bundle exec jekyll serve",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
