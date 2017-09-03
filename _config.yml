@@ -1,45 +1,88 @@
-url: http://blog.kieranties.com
+locale: "en-GB"
+timezone: Europe/London
+title: Kieranties Codes
+# title_seperator: "|" # used for seo friendly page titles
+name: "Kieran Marron" # site wide author
+description: Musings, thoughts, ramblings, code.
+url: http://kieranties.com
 baseurl: ''
-image: /hydejack/assets/img/nap.jpg
-color: '#A85641'
+repository: Kieranties/Kieranties.github.io
+# teaser: /assets/images/500x300.png # fallback image for related posts
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: kierantiescodes
+twitter:
+  username: "Kieranties"
+# analytics:
+#   provider: "google"
+#   google:
+#     tracking_id: "UA-1234567-8"
+
 
 author:
-  name: Kieranties
-  email: Kieran@Kieranties.com
+  name   : "Kieranties"
+  # avatar : "/assets/images/bio-photo.jpg"
+  bio    : "Coding my way out of problems."
+  location: Bristol,UK
+  email  : Kieran@Kieranties.com
+  uri    : "http://Kieranties.com"
+  twitter: Kieranties
+  github : Kieranties
+  linkedin: Kieranties
+  stackoverflow: 1749821/kieranties
 
-disqus_shortname: kierantiescodes
-google_analytics: ''
 
-collections:
-  featured_categories:
-    permalink:       /category/:name/
-    output:          true
-  featured_tags:
-    permalink:       /tag/:name/
-    output:          true
-
-title: Kieranties Codes
-email: Kieran@Kieranties.com
-description: Musings, thoughts, ramblings, code.
-twitter_username: Kieranties
-github_username:  Kieranties
-lang: en-GB
-# theme: jekyll-theme-hydejack
-repository: Kieranties/Kieranties.github.io
-show_downloads: false
-markdown: kramdown
 paginate: 5
 permalink: /:year/:month/:day/:title
 
 plugins:
-  - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-avatar
-  - jemoji
-  - jekyll-mentions
+ - jekyll-feed
+ - jekyll-redirect-from
+ - jekyll-seo-tag
+ - jekyll-sitemap
+ - jekyll-avatar
+ - jemoji
+ - jekyll-mentions
+
+include:
+ - _pages
 
 exclude:
   - CNAME
   - .vscode/
+  - Gemfile
+  - importer.rb
+  - blogexport.xml
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+defaults:
+  # all
+  - scope:
+      path: ""
+    values:
+      author_profile: true
+
+  # _pages
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      comments: true
+      share: true
+      related: true

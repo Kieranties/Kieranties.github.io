@@ -1,15 +1,15 @@
 ---
-layout: post
 title: A successful Git branching model » nvie.com
 date: '2011-10-10T11:41:00.000-07:00'
 author: Kieranties
-tags:
+categories:
 - Git
 - Utilities
 - Source Control
 modified_time: '2011-10-14T04:23:39.225-07:00'
 blogger_id: tag:blogger.com,1999:blog-3456458686961244994.post-8617146289188956499
 blogger_orig_url: http://blog.kieranties.com/2011/10/successful-git-branching-model-nviecom.html
+redirect_from: "/2011/10/successful-git-branching-model-nviecom.html"
 ---
 
 <div style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em; text-align: left;"><a href="http://nvie.com/posts/a-successful-git-branching-model/"><img border="0" height="320" src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" width="238" /></a></div>A really quite excellent <a href="http://nvie.com/posts/a-successful-git-branching-model/">blog post by Vincent Driessen</a> which provides a clear process and direction for users of any <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">Distributed Version Control System (DVCS).</a>  Focussing on <a href="http://git-scm.com/">Git</a> and demonstrating the process through neat visual diagrams as well as the simple commands to use, this is a highly recognised and valued strategy. <br /><blockquote>... I present the development model that I’ve introduced for all of my projects ... which has turned out to be very successful... I won’t talk about any of the projects’ details, merely about the branching strategy and release management. </blockquote><cite><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model » nvie.com</a></cite><br />I'm hoping I will be able to take the time at work to revise our current branching strategy. &nbsp;We already implement close to 80% of what Vincent discusses, but I'm convinced implementing the whole process will aid supporting live systems as well as tidying up the general dev-test-deploy procedure.<br /><br />Of course, the usual problems with this procedure arise through confusion over which version is next to be deployed or what branch contains what feature.  Fortunately, many others have had the same issues; bringing about the creation of the <a href="https://github.com/nvie/gitflow">git-flow collection of extensions</a>.  These extensions really refine the workflow process and I'm sure will be key to reduce the friction when bringing the rest of the team up to speed.

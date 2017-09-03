@@ -1,14 +1,14 @@
 ---
-layout: post
 title: Multipart Form Posting in Android
 date: '2012-03-28T03:50:00.000-07:00'
 author: Kieranties
-tags:
+categories:
 - Java
 - Android
 modified_time: '2012-03-28T03:50:45.139-07:00'
 blogger_id: tag:blogger.com,1999:blog-3456458686961244994.post-2758415877023311604
 blogger_orig_url: http://blog.kieranties.com/2012/03/multipart-form-posting-in-android.html
+redirect_from: "/2012/03/multipart-form-posting-in-android.html"
 ---
 
 I'm chugging away making a native Android app for the rather splendid <a href="http://twitter.com/stringfellow">@stringfellow</a>. &nbsp;It's been quite the eye-opener in terms of <a href="http://developer.android.com/resources/dashboard/platform-versions.html">Android&nbsp;fragmentation</a>, the joys of returning to Java after a (very) long hiatus and the intricacies of the platform as a whole. &nbsp;I fully intend to write-up a few posts on what I've done (and hope for feedback on how things can be improved) but the following was an unexpected pitfall I think is worth talking about now.<br /><br />Naturally the wealth of apps on Android and other mobile devices require some kind of network interface for consumption of data and communicating details back to servers. &nbsp;Android - being built with Java - allows you to use the&nbsp;<a "target="_blank" href="http://developer.android.com/reference/org/apache/http/client/HttpClient.html">org.apache.http.client.HttpClient</a>&nbsp;which is great until you want to send an image/file or anything else in a multi-part form.<br /><br />The version of HttpClient in Android (2.2 - not developing against other versions yet) does not have support for multi-part forms. &nbsp;You could write content as&nbsp;separate&nbsp;entities/directly to the stream but that can soon get messy.<br /><br />To make things simpler, grab the <a href="http://hc.apache.org/downloads.cgi">HttpClient (4.1.3)</a> jar from Apache, drop into your Android project build path and do the following in your request/response handler:<br /><br /><br /><script src="https://gist.github.com/2225346.js">  </script>
