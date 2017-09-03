@@ -14,10 +14,10 @@ comments:
     shortname: kierantiescodes
 twitter:
   username: "Kieranties"
-# analytics:
-#   provider: "google"
-#   google:
-#     tracking_id: "UA-1234567-8"
+analytics:
+  provider: "google"
+  google:
+    tracking_id: "UA-105831988-1"
 
 
 author:
