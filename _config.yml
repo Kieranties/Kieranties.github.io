@@ -4,7 +4,7 @@ title: Kieranties Codes
 # title_seperator: "|" # used for seo friendly page titles
 name: "Kieran Marron" # site wide author
 description: Musings, thoughts, ramblings, code.
-url: http://kieranties.com
+url: http://blog2.kieranties.com
 baseurl: ''
 repository: Kieranties/Kieranties.github.io
 # teaser: /assets/images/500x300.png # fallback image for related posts
