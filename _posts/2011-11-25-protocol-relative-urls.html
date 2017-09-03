@@ -1,0 +1,14 @@
+---
+layout: post
+title: Protocol-Relative URLs
+date: '2011-11-25T10:56:00.001-08:00'
+author: Kieranties
+tags:
+- Web
+- Tips
+modified_time: '2011-11-26T09:35:12.852-08:00'
+blogger_id: tag:blogger.com,1999:blog-3456458686961244994.post-6870288984386641004
+blogger_orig_url: http://blog.kieranties.com/2011/11/protocol-relative-urls.html
+---
+
+One of the things I love about programming and development in general is that, no matter how well you think you know something, there's always something that can surprise you.<br /><br />It doesn't matter what language/domain/stack/toolset you're working with, there are often ways of doing things you haven't thought of. &nbsp;Sometimes these other ways of doing things are obscure or different to your normal way of thinking. &nbsp;That's why you've missed them to begin with.<br /><br />Other times, well...you can't see why you haven't thought of them. &nbsp;I like it when the surprises are so simple, so immediately effective, that you can be pretty sure you'll remember them from then on.<br /><br />So to the point. <br /><br />I'm currently reading <a href="http://shop.oreilly.com/product/0636920018421.do">Javascript Web Applications</a>. &nbsp;An excellent book by <a href="http://alexmaccaw.co.uk/">Alex MacCaw</a>, the author of <a href="http://spinejs.com/">Spine</a>. &nbsp;Aside from the book being pretty well written, there are some awesome nuggets of information in there. &nbsp;In a section discussing the benefits of using a <a href="http://en.wikipedia.org/wiki/Content_delivery_network">CDN</a>, the following example code is used:<br /><pre>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"&gt;&lt;/script&gt;</pre>Just double check that again, did you see it?  There's no protocol declared for the script request.  This makes it a protocol-relative URL. &nbsp;The request for the script will be completed over the same protocol as the current page.<br /><br />Relative URLs? Got that. &nbsp;<i>Protocol</i>-relative URLs? Why haven't I thought of that before!?<br /><br />The advantage of this is that you can prevent virtually all annoying mixed content warnings! &nbsp;<a href="http://paulirish.com/2010/the-protocol-relative-url/">Paul Irish</a> has some more info and highlights one or two quirks with IE (of course) and stylesheets. &nbsp;But the trick can be used for any extra content to load into the page. &nbsp;It can also be used in pretty much every browser. &nbsp;IE 3.0 supported it, why didn't I learn this in Web Dev 101?
