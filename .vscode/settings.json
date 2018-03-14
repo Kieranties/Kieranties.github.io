@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite the default settings
+{
+    // file specific settings
+    "[json]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4
+    },
+    "[shellscript]":{
+        "files.eol": "\n"
+    },
+    "window.menuBarVisibility": "default",
+}
