@@ -4,8 +4,18 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Bundle Install",
+            "identifier": "install",
+            "type": "shell",
+            "command": "wsl bundle update; wsl bundle install",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+        },
+        {
             "label": "Serve",
             "type": "shell",
+            "dependsOn": "install",
             "command": "wsl bundle exec jekyll serve --drafts",
             "options": {
                 "cwd": "${workspaceRoot}"
