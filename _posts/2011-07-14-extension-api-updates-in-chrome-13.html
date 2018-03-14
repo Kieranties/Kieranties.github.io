@@ -1,0 +1,13 @@
+---
+title: Extension API Updates in Chrome 13
+date: '2011-07-14T20:05:00.000-07:00'
+tags:
+- Chrome Extensions
+- Google Chrome
+modified_time: '2011-10-09T12:09:11.723-07:00'
+blogger_id: tag:blogger.com,1999:blog-3456458686961244994.post-7869834779872684036
+blogger_orig_url: http://blog.kieranties.com/2011/07/extension-api-updates-in-chrome-13.html
+redirect_from: "/2011/07/extension-api-updates-in-chrome-13.html"
+---
+
+<blockquote>...you can now make cross-origin XMLHttpRequest calls with the privileges of the extension directly from your content script.  You will no longer need to relay these requests through a background page; this should simplify your code. In some cases, it may even eliminate your need to use a background page. Here&rsquo;s a <a href="http://code.google.com/chrome/extensions/samples.html#6871d09f4a96bf9d4b6cc724d00e909cee0f3902">sample extension</a> which demonstrates the old way a content script could make a cross domain request. As you can see, the extension required a <a href="http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/howto/contentscript_xhr/background.html?view=markup&amp;pathrev=91622">background page</a> to route the cross-origin calls through a <span style="font-family: courier;">chrome.extension.onRequest</span> listener. Using the new content script cross-origin capabilities, we were able to successfully <a href="http://src.chromium.org/viewvc/chrome?view=rev&amp;revision=91623">rewrite the extension</a> to completely eliminate the background page requirement. This reduces the memory required to run the extension, and reduces code complexity as well...</blockquote><div >via <a href="http://blog.chromium.org/2011/07/chrome-extensions-now-with-more.html">blog.chromium.org</a></div><p>You can now (as of Chrome 13) directly execute cross-origin <em>XMLHttpRequest</em> calls from content script pages, as opposed to routing calls through the extension background page.</p><p>This is a real performance gain as the background page does not have to be riddled with listeners and in some cases can be removed from the extension all together. &nbsp;Content scripts are injected based on match patterns in the extensions manifest file.</p><p>Further advances include additional <a title="Chrome Extensions - Match Patterns" href="http://code.google.com/chrome/extensions/trunk/content_scripts.html#match-patterns-globs" target="_blank">match pattern</a> options and advances to the <a title="Chrome Extensions - Proxy" href="http://code.google.com/chrome/extensions/trunk/proxy.html" target="_blank">Proxy API</a></p>

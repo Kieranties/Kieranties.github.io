@@ -1,0 +1,17 @@
+---
+title: A Simple LocalStorage Model
+date: '2011-11-20T04:07:00.001-08:00'
+
+tags:
+- Chrome Extensions
+- Google Chrome
+- Javascript
+- Utilities
+- HTML5
+modified_time: '2011-11-20T05:40:41.999-08:00'
+blogger_id: tag:blogger.com,1999:blog-3456458686961244994.post-885242810860717418
+blogger_orig_url: http://blog.kieranties.com/2011/11/simple-localstorage-model.html
+redirect_from: "/2011/11/simple-localstorage-model.html"
+---
+
+I've been playing around with <a href="http://code.google.com/chrome/extensions/docs.html">Google Chrome extensions</a> again (you should too, they are <i>really</i> simple).<br /><br />Chrome extensions at their most basic level consist of HTML and Javascript; allowing full utilisation of HTML5 APIs such as <a href="http://slides.html5rocks.com/#web-storage">WebStorage</a>, <a href="http://slides.html5rocks.com/#indexed-db">IndexedDb</a> and everything else.  Chrome sandboxes extensions just as it does with each tab you have open, so an extension follows the HTML5 requirements of only having access to it's own 'domain' of data.<br /><br />When creating an extension, you'll likely want to store some data.  The <a href="http://dev.w3.org/html5/webstorage/#the-localstorage-attribute">HTML5 WebStorage spec</a> allows a site (or extension in this case) to store simple key value pairs.  This is ideal for extensions looking to keep track of simple things such as user preferences.  It shouldn't be used for complex data or data that you'll be expecting to search over.  Use IndexedDb for that.<br /><br />The following is a simple mechanism which can be used in an extension to store and retrieve data using <code>localStorage</code>.  It provides no data validation or verification other than returning null if no data is found and storing values as JSON.<br /><br />Stored properties are added by calling the <code>settings.implement</code> function.  The function will take any number of parameters, so additional properties can be added with ease.  Properties are checked to see if they already exist before being created.<br /><br />As the model is in Javascript, it can of course be utilised by any web page as well :-) <br /><br /><script src="https://gist.github.com/1380258.js"> </script>

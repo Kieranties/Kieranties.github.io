@@ -1,44 +1,127 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Theme
+# Using github pages remote themes
+remote_theme          : mmistakes/minimal-mistakes
+minimal_mistakes_skin : "dark"
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# Site Settings
+locale              : "en-GB"
+title               : Kieranties Codes
+title_seperator     : "|" # used for seo friendly page titles
+name                : "Kieran Marron" # site wide author
+description         : Musings, thoughts, ramblings, code.
+url                 : https://blog.kieranties.com
+baseurl             : ''
+repository          : Kieranties/Kieranties.github.io
+breadcrumbs         : false
+search              : true
+search_full_content : true
 
-# Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: kierantiescodes
+
+twitter:
+  username: "Kieranties"
+og_image: "/assets/images/avatar-head.png"
+
+analytics:
+  provider: "google"
+  google:
+    tracking_id: "UA-105831988-1"
+
+author:
+  name   : "Kieran Marron"
+  avatar : "/assets/images/avatar-head.png"
+  bio    : "Coding my way in and out of problems."
+  location: Bristol, UK
+  email  : Kieran@Kieranties.com
+  uri    : "http://Kieranties.com"
+  twitter: Kieranties
+  github : Kieranties
+  linkedin: Kieranties
+  stackoverflow: 1749821/kieranties
+
+
+paginate  : 5
+permalink : /:year/:month/:day/:title
+timezone  : Europe/London
 
 plugins:
+  - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
   - jekyll-feed
+  - jemoji
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
+  - CNAME
+  - .vscode/
+  - build/
+keep_files:
+  - .git
+  - .svn
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+defaults:
+  # all
+  - scope:
+      path: ""
+    values:
+      author_profile: true
+      classes: wide
+
+  # _pages
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      author_profile: true
+      comments: true
+      share: true
+      related: true
