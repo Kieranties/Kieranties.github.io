@@ -33,7 +33,8 @@ and the common parameter `-InformationAction` for cmdlets.
 {% gist 90ff3b32f4645577a1f201f3092300bd Write-InformationExample.ps1 %}
 
 With the new stream available, the implementation of `Write-Host` was then changed
-to _redirect_ to `Write-Information`.  To make the changes non-breaking the `-InformationAction` is always treated as `Continue` to ensure that
+to _redirect_ to `Write-Information`.  To make the changes non-breaking the 
+`-InformationAction` is always treated as `Continue` to ensure that
 existing uses of `Write-Host` continue to display as they did in previous
 versions of PowerShell.
 
@@ -45,9 +46,10 @@ use `$InformationPreference` and `-InformationAction`
 
 {% gist 90ff3b32f4645577a1f201f3092300bd Write-HostExample.ps1 %}
 
-### But what about colors?
+### But what about colours?
 
-However, `Write-Host` supports `-ForegroundColor` and `-BackgroundColor` but `Write-Information` does not. People continue to use
+However, `Write-Host` supports `-ForegroundColor` and `-BackgroundColor` but 
+`Write-Information` does not. People continue to use
 `Write-Host` and in doing so they continue to prevent the user from using
 `$InformationPreference` and `-InformationAction` as intended.
 
@@ -73,7 +75,8 @@ In the event that this check is passed, the `MessageData` of the current record
 is tested as a `HostInformationMessage` and if found, the message is then
 decomposed and its values used to communicate to the host.
 
-Before all of these checks, there is a call to `CBhost.InternalUI.WriteInformationRecord(record);` where (I assume...) the normal writing of the record occurs.
+Before all of these checks, there is a call to `CBhost.InternalUI.WriteInformationRecord(record);` 
+where (I assume...) the normal writing of the record occurs.
 
 From this information we now understand:
 + When calling `Write-Host` the parameters are packed up and passed to
