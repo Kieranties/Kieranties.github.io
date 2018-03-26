@@ -2,7 +2,6 @@
 title: Write-Information With Colours
 tags:
     - Powershell
-    - Sitecore Install Framework
 classes: ''
 toc: true
 toc_label: In This Post
