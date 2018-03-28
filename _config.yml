@@ -18,6 +18,8 @@ search_full_content : true
 
 comments:
   provider: staticman_v2
+staticman:
+  branch: master
 reCaptcha:
   enabled: true
   siteKey: 6LekWk8UAAAAAL0BWzZfSI0jcnOLPGVISGqHy0ws
