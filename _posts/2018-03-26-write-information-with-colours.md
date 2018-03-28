@@ -4,6 +4,8 @@ tags:
     - Powershell
 classes: ''
 toc: true
+header:
+  image: /assets/gifs/writecoloured.gif
 ---
 
 When learning PowerShell, one of the first things you learn is that the command
