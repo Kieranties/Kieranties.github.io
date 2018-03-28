@@ -17,9 +17,11 @@ search              : true
 search_full_content : true
 
 comments:
-  provider: "disqus"
-  disqus:
-    shortname: kierantiescodes
+  provider: staticman_v2
+reCaptcha:
+  enabled: true
+  siteKey: 6LekWk8UAAAAAL0BWzZfSI0jcnOLPGVISGqHy0ws
+  secret: fmMc5ELMPC5tAzsYoVWP7vWQpimhM6Lf/0RyM8ntYzCHq2NXpBhrQW9n+/reVMkKcnMetyxvJjTkR3lM5gQ2zfnSpT6Twl+c2duF4jwUzqv/pD/YJhlBpx5pUTrihTIHaGTrgMl/YABaB4O5yg2STEavdR5NMtlp2QUgtHptAAo=
 
 twitter:
   username: "Kieranties"

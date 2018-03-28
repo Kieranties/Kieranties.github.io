@@ -1,0 +1,23 @@
+# Name of the property. You can have multiple properties with completely
+# different config blocks for different sections of your site.
+# For example, you can have one property to handle comment submission and
+# another one to handle posts.
+# To encrypt strings use the following endpoint:
+# https://api.staticman.net/v2/encrypt/{TEXT TO BE ENCRYPTED}
+
+comments:
+  allowedFields   : ["name", "email", "url", "message"]
+  branch          : "master"
+  commitMessage   : "New comment"
+  filename        : "comment-{@timestamp}"
+  format          : "yaml"
+  generatedFields:
+    date:
+      type         : "date"
+      options:
+        format     : "iso8601"
+  moderation       : true
+  path             : "_data/comments/{options.slug}"
+  requiredFields   : ["name", "email", "message"]
+  transforms:
+    email          : md5
