@@ -16,8 +16,8 @@ breadcrumbs         : false
 search              : true
 search_full_content : true
 
-comments:
-  provider: staticman_v2
+#comments:
+#  provider: staticman_v2
 staticman:
   branch: master
 reCaptcha:
