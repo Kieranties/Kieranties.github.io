@@ -4,19 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Bundle Update",
-            "identifier": "update",
-            "type": "shell",
-            "command": "wsl ./build/update.sh",
-            "options": {
-                "cwd": "${workspaceRoot}"
-            },
-        },
-        {
             "label": "Serve",
             "type": "shell",
-            "dependsOn": "update",
-            "command": "wsl ./build/run.sh",
+            "command": "docker run -it --rm -v ${workspaceRoot}:/usr/src/app -p '4000:4000' starefossen/github-pages",
             "options": {
                 "cwd": "${workspaceRoot}"
             },
@@ -24,21 +14,6 @@
                 "kind": "build",
                 "isDefault": true
             }
-        },
-        // Utility tasks for setting up the dev environment
-        {
-            "label": "Prepare WSL [Ubuntu]",
-            "identifier": "PrepWsl",
-            "type": "shell",
-            "command": ".\\build\\env\\PrepWsl.ps1",
-            "problemMatcher": []
-        },
-        {
-            "label": "Install Jekyll",
-            "type": "shell",
-            "dependsOn": "PrepWsl",
-            "command": "wsl ./build/env/jekyllinstall.sh",
-            "problemMatcher": []
         }
     ]
 }
