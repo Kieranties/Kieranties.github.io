@@ -16,8 +16,8 @@ breadcrumbs         : false
 search              : true
 search_full_content : true
 
-#comments:
-#  provider: staticman_v2
+comments:
+  provider: staticman_v2
 staticman:
   branch: master
 reCaptcha:
@@ -45,7 +45,6 @@ author:
   github : Kieranties
   linkedin: Kieranties
   stackoverflow: 1749821/kieranties
-
 
 paginate  : 5
 permalink : /:year/:month/:day/:title
