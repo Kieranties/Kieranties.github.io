@@ -16,10 +16,6 @@ I currently work as a Lead Developer for [Sitecore][1], focusing on delivering
 new features and improvements to the core products using dotnet core and future
 tooling.
 
-I am the architect and lead on the [Sitecore Install Framework][2], a PowerShell
-module which enables developers to provide configuration based installs of
-Sitecore for on-premise solutions.
-
 ## Contact
 
 <div id="sent" style="display:none">
@@ -39,4 +35,3 @@ Sitecore for on-premise solutions.
 </form>
 
 [1]:https://www.sitecore.com/
-[2]:https://dev.sitecore.net/Downloads/Sitecore_Installation_Framework.aspx
