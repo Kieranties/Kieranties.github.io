@@ -87,6 +87,7 @@ To reduce the number of keystrokes required, I've created a bitly link to the [g
 PS> iwr bitly.com/gifterm | iex # All cats, all the time
 PS> $enf:gifq='swear trek'; iwr bitly.com/gifterm | iex # He's f*%&$d Jim!
 ```
+{% gist e78f8cc26f87c3dec3ab155816bce372 %}
 
 [Visual Studio]: https://visualstudio.microsoft.com/
 [Visual Studio Code]: https://code.visualstudio.com/
